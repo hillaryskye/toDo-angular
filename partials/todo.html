@@ -1,0 +1,14 @@
+<main ng-controller="TodosController">
+<h1>AngularFire Todo</h1>
+<button ng-click="logout()">Logout</button>
+    <form ng-submit="addTodo()">
+      <label for="">New Todo</label>
+      <input type="text" ng-model="newTodo.text">
+    </form>
+
+  <a class="item" ng-repeat="todo in todos">
+    <i class="fa fa-times" ng-click="removeTodo(todo)"></i>
+    <div class="content">
+      <div class="header">{{todo.text}}</div>
+  </a>
+    </div>
